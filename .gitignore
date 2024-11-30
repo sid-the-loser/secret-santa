@@ -17,3 +17,6 @@ mono_crash.*.json
 
 # Avoiding the build folders
 /[Bb]uilds/
+
+# Not including any Aseprite files
+*.aseprite

@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bid42qjsk4vlr"]
+[gd_scene load_steps=5 format=3 uid="uid://bid42qjsk4vlr"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_abdh1"]
+[ext_resource type="Texture2D" uid="uid://bfwxj5fng02gd" path="res://Sprites/support-icon.png" id="2_58ch4"]
+[ext_resource type="Texture2D" uid="uid://2x7eyhv12av" path="res://Sprites/reset-icon.png" id="2_d2xo3"]
+[ext_resource type="Texture2D" uid="uid://c5132qw8j03ag" path="res://Sprites/tutorial-icon.png" id="3_i6ngj"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -59,15 +62,20 @@ text = "Clear"
 
 [node name="ResetButton" type="Button" parent="TabContainer/Draw Names"]
 layout_mode = 2
-text = "Redo name draws"
+text = "Generate new name draws"
+icon = ExtResource("2_d2xo3")
 
 [node name="TutorialButton" type="Button" parent="TabContainer/Draw Names"]
 layout_mode = 2
 text = "Tutorial"
+icon = ExtResource("3_i6ngj")
 
 [node name="SupportButton" type="Button" parent="TabContainer/Draw Names"]
-visible = false
 layout_mode = 2
+size_flags_vertical = 4
 text = "Support me"
+icon = ExtResource("2_58ch4")
 
+[connection signal="button_down" from="TabContainer/Draw Names/ResetButton" to="." method="_on_reset_button_button_down"]
 [connection signal="button_down" from="TabContainer/Draw Names/TutorialButton" to="." method="_on_tutorial_button_button_down"]
+[connection signal="button_down" from="TabContainer/Draw Names/SupportButton" to="." method="_on_support_button_button_down"]
