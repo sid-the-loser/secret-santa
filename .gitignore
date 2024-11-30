@@ -20,3 +20,6 @@ mono_crash.*.json
 
 # Not including any Aseprite files
 *.aseprite
+
+# Visual Studio directory
+.vscode/
