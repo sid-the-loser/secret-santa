@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=3 uid="uid://bid42qjsk4vlr"]
+
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_abdh1"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_abdh1")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="List of Names" type="TextEdit" parent="TabContainer"]
+visible = false
+layout_mode = 2
+placeholder_text = "Enter the names here, line by line...
+
+eg:
+Sid
+Virul
+Vishnu"
+metadata/_tab_index = 0
+
+[node name="Draw Names" type="VBoxContainer" parent="TabContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_tab_index = 1
+
+[node name="FromLineEdit" type="LineEdit" parent="TabContainer/Draw Names"]
+layout_mode = 2
+placeholder_text = "Enter you name here and click \"Show\" button..."
+
+[node name="ToLabel" type="Label" parent="TabContainer/Draw Names"]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Draw Names"]
+layout_mode = 2
+alignment = 1
+
+[node name="ShowButton" type="Button" parent="TabContainer/Draw Names/HBoxContainer"]
+layout_mode = 2
+text = "Show"
+
+[node name="ClearButton" type="Button" parent="TabContainer/Draw Names/HBoxContainer"]
+layout_mode = 2
+text = "Clear"
+
+[node name="ResetButton" type="Button" parent="TabContainer/Draw Names"]
+layout_mode = 2
+text = "Redo name draws"
+
+[node name="TutorialButton" type="Button" parent="TabContainer/Draw Names"]
+layout_mode = 2
+text = "Tutorial"
+
+[node name="SupportButton" type="Button" parent="TabContainer/Draw Names"]
+visible = false
+layout_mode = 2
+text = "Support me"
+
+[connection signal="button_down" from="TabContainer/Draw Names/TutorialButton" to="." method="_on_tutorial_button_button_down"]
