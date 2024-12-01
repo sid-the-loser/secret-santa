@@ -45,8 +45,10 @@ layout_mode = 2
 placeholder_text = "Enter you name here and click \"Show\" button..."
 
 [node name="ToLabel" type="Label" parent="TabContainer/Draw Names"]
+custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
 horizontal_alignment = 1
+autowrap_mode = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Draw Names"]
 layout_mode = 2
