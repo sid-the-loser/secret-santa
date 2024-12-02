@@ -11,9 +11,16 @@ config_version=5
 [application]
 
 config/name="Secret Santa"
+config/description="An app Loser made for Secret Santa event in his group. Commisioned by Virz."
+config/version="r1.0.0"
 run/main_scene="res://Scenes/main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://app-icon.png"
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+config/icon="res://app-icon.svg"
+config/windows_native_icon="res://app-icon.ico"
 
 [display]
 

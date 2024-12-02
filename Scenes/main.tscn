@@ -21,10 +21,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-current_tab = 0
+current_tab = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="List of Names" type="TextEdit" parent="TabContainer"]
+visible = false
 layout_mode = 2
 placeholder_text = "Enter the names here, line by line...
 
@@ -35,14 +36,13 @@ Vishnu"
 metadata/_tab_index = 0
 
 [node name="Draw Names" type="VBoxContainer" parent="TabContainer"]
-visible = false
 layout_mode = 2
 alignment = 1
 metadata/_tab_index = 1
 
 [node name="FromLineEdit" type="LineEdit" parent="TabContainer/Draw Names"]
 layout_mode = 2
-placeholder_text = "Enter you name here and click \"Show\" button..."
+placeholder_text = "Enter you name here and click \"Show\" button... (case matters)"
 
 [node name="ToLabel" type="Label" parent="TabContainer/Draw Names"]
 custom_minimum_size = Vector2(1, 1)
