@@ -6,6 +6,8 @@ extends Control
 @onready var reset_button_name = $"TabContainer/Draw Names/ResetButton".get_text()
 
 var from_names = []
+# var already_checked = [] # this feature can be added if needed letting people
+#                           only vide their draws once!
 var from_to_dict = {}
 
 
@@ -67,6 +69,7 @@ func reset_and_regenerate():
 					available_names.remove_at(available_names.find(i))
 				else:
 					random_assigning.insert(randi_range(0, len(random_assigning)-1), i)
+					from_to_dict[names[i]] = names[random_assigning[-1]]
 					break
 			
 			random_assigning.append(available_names[randi_range(0, len(available_names)-1)])
