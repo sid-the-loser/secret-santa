@@ -63,14 +63,13 @@ func reset_and_regenerate():
 					available_names.remove_at(available_names.find(assigned))
 			
 			if i in available_names: # removes if the current name is in the available_names list variable
-				available_names.remove_at(available_names.find(i))
-
-			var _temp = randi_range(0, len(available_names)-1)
-			print(len(available_names)-1)
+				if (len(available_names)) > 1:
+					available_names.remove_at(available_names.find(i))
+				else:
+					random_assigning.insert(randi_range(0, len(random_assigning)-1), i)
+					break
 			
-			print(_temp)
-			
-			random_assigning.append(available_names[_temp])
+			random_assigning.append(available_names[randi_range(0, len(available_names)-1)])
 
 			from_to_dict[names[i]] = names[random_assigning[-1]]
 
