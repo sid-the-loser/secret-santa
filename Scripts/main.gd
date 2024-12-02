@@ -109,7 +109,7 @@ func show_name():
 
 
 func _on_tutorial_button_button_down():
-	OS.shell_open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+	OS.shell_open("https://youtu.be/8fxwNVHU_SU")
 
 
 func _on_support_button_button_down():
