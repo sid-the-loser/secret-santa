@@ -75,8 +75,6 @@ func reset_and_regenerate():
 
 		for i in range(len_names):
 			from_to_dict[names[i]] = names[random_assigning[i]]
-			
-		print(from_to_dict)
 
 
 		to_label.add_theme_color_override("font_color", Color.GREEN)
